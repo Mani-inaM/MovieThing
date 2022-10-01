@@ -88,4 +88,51 @@ public class UnitTest1
         mockRepository.Verify(r => r.GetAll(), Times.Once);
     }
     
+    
+    [Theory]
+        [InlineData(1,3,2)]
+        [InlineData(2,3,1)]
+        public void GetNumberOfRatesByReviewer(int reviewerID, int rating  ,int expectedValue)
+        {
+            // Arrange
+            BEReview[] fakeRepo = new BEReview[]
+            {
+                new BEReview() { Reviewer = 1, Movie = 1, Grade = 3, Date = new DateTime()},
+                new BEReview() { Reviewer = 1, Movie = 2, Grade = 3, Date = new DateTime()},
+                new BEReview() { Reviewer = 2, Movie = 1, Grade = 3, Date = new DateTime()}
+            };
+            Mock<IReviewRepository> mockRepository = new Mock<IReviewRepository>();
+            mockRepository.Setup(r=>r.GetAll()).Returns(fakeRepo);
+    
+            IReviewService service = new ReviewService(mockRepository.Object);
+    
+            // Act
+            int result = service.GetNumberOfRatesByReviewer(reviewerID, rating);
+    
+            // Assert
+            Assert.Equal(expectedValue, result);
+            mockRepository.Verify(r => r.GetAll(), Times.Once);
+        }
+        [Fact]
+        public void GetThrownArgumentExceptionForInvalidNumber()
+        {
+            // Arrange
+            BEReview[] fakeRepo = new BEReview[]
+            {
+                new BEReview() { Reviewer = 1, Movie = 1, Grade = 3, Date = new DateTime()},
+                new BEReview() { Reviewer = 1, Movie = 2, Grade = 3, Date = new DateTime()},
+                new BEReview() { Reviewer = 2, Movie = 1, Grade = 3, Date = new DateTime()}
+            };
+            Mock<IReviewRepository> mockRepository = new Mock<IReviewRepository>();
+            mockRepository.Setup(r=>r.GetAll()).Returns(fakeRepo);
+    
+            IReviewService service = new ReviewService(mockRepository.Object);
+    
+            //Act+Assert
+            int result;
+            var ex = Assert.Throws<ArgumentException>(()=> result = service.GetNumberOfRatesByReviewer(1, 2000));
+    
+    
+        }
+    
 }

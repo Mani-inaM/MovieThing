@@ -1,27 +1,25 @@
 {
   "format": 1,
   "restore": {
-    "C:\\Users\\manid\\RiderProjects\\MovieReviewThing\\ReviewServiceTest\\ReviewServiceTest.csproj": {}
+    "C:\\Users\\Jacob Hvass Pedersen\\IdeaProjects\\MovieThing\\ReviewServiceTest\\ReviewServiceTest.csproj": {}
   },
   "projects": {
-    "C:\\Users\\manid\\RiderProjects\\MovieReviewThing\\MovieRatings\\MovieRatings.csproj": {
+    "C:\\Users\\Jacob Hvass Pedersen\\IdeaProjects\\MovieThing\\MovieRatings\\MovieRatings.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\manid\\RiderProjects\\MovieReviewThing\\MovieRatings\\MovieRatings.csproj",
+        "projectUniqueName": "C:\\Users\\Jacob Hvass Pedersen\\IdeaProjects\\MovieThing\\MovieRatings\\MovieRatings.csproj",
         "projectName": "MovieRatings",
-        "projectPath": "C:\\Users\\manid\\RiderProjects\\MovieReviewThing\\MovieRatings\\MovieRatings.csproj",
-        "packagesPath": "C:\\Users\\manid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\manid\\RiderProjects\\MovieReviewThing\\MovieRatings\\obj\\",
+        "projectPath": "C:\\Users\\Jacob Hvass Pedersen\\IdeaProjects\\MovieThing\\MovieRatings\\MovieRatings.csproj",
+        "packagesPath": "C:\\Users\\Jacob Hvass Pedersen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jacob Hvass Pedersen\\IdeaProjects\\MovieThing\\MovieRatings\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\manid\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Jacob Hvass Pedersen\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
@@ -59,32 +57,30 @@
         }
       }
     },
-    "C:\\Users\\manid\\RiderProjects\\MovieReviewThing\\ReviewServiceTest\\ReviewServiceTest.csproj": {
+    "C:\\Users\\Jacob Hvass Pedersen\\IdeaProjects\\MovieThing\\ReviewServiceTest\\ReviewServiceTest.csproj": {
       "version": "1.0.0",
       "restore": {
-        "projectUniqueName": "C:\\Users\\manid\\RiderProjects\\MovieReviewThing\\ReviewServiceTest\\ReviewServiceTest.csproj",
+        "projectUniqueName": "C:\\Users\\Jacob Hvass Pedersen\\IdeaProjects\\MovieThing\\ReviewServiceTest\\ReviewServiceTest.csproj",
         "projectName": "ReviewServiceTest",
-        "projectPath": "C:\\Users\\manid\\RiderProjects\\MovieReviewThing\\ReviewServiceTest\\ReviewServiceTest.csproj",
-        "packagesPath": "C:\\Users\\manid\\.nuget\\packages\\",
-        "outputPath": "C:\\Users\\manid\\RiderProjects\\MovieReviewThing\\ReviewServiceTest\\obj\\",
+        "projectPath": "C:\\Users\\Jacob Hvass Pedersen\\IdeaProjects\\MovieThing\\ReviewServiceTest\\ReviewServiceTest.csproj",
+        "packagesPath": "C:\\Users\\Jacob Hvass Pedersen\\.nuget\\packages\\",
+        "outputPath": "C:\\Users\\Jacob Hvass Pedersen\\IdeaProjects\\MovieThing\\ReviewServiceTest\\obj\\",
         "projectStyle": "PackageReference",
         "configFilePaths": [
-          "C:\\Users\\manid\\AppData\\Roaming\\NuGet\\NuGet.Config",
-          "C:\\Program Files (x86)\\NuGet\\Config\\Microsoft.VisualStudio.Offline.config"
+          "C:\\Users\\Jacob Hvass Pedersen\\AppData\\Roaming\\NuGet\\NuGet.Config"
         ],
         "originalTargetFrameworks": [
           "net6.0"
         ],
         "sources": {
-          "C:\\Program Files (x86)\\Microsoft SDKs\\NuGetPackages\\": {},
           "https://api.nuget.org/v3/index.json": {}
         },
         "frameworks": {
           "net6.0": {
             "targetAlias": "net6.0",
             "projectReferences": {
-              "C:\\Users\\manid\\RiderProjects\\MovieReviewThing\\MovieRatings\\MovieRatings.csproj": {
-                "projectPath": "C:\\Users\\manid\\RiderProjects\\MovieReviewThing\\MovieRatings\\MovieRatings.csproj"
+              "C:\\Users\\Jacob Hvass Pedersen\\IdeaProjects\\MovieThing\\MovieRatings\\MovieRatings.csproj": {
+                "projectPath": "C:\\Users\\Jacob Hvass Pedersen\\IdeaProjects\\MovieThing\\MovieRatings\\MovieRatings.csproj"
               }
             }
           }
