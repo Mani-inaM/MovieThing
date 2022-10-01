@@ -227,4 +227,43 @@ public class UnitTest1
         mockRepository.Verify(r => r.GetAll(), Times.Once);
     }
 
+    
+    [Fact]
+    public void GetMoviesWithHighestNumberOfTopRates()
+    {
+        // Arrange
+        BEReview[] fakeRepo = new BEReview[]
+        {
+            new BEReview() { Reviewer = 1, Movie = 1, Grade = 5, Date = new DateTime()},
+            new BEReview() { Reviewer = 1, Movie = 1, Grade = 5, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 1, Grade = 5, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 1, Grade = 2, Date = new DateTime()},
+            new BEReview() { Reviewer = 1, Movie = 2, Grade = 5, Date = new DateTime()},
+            new BEReview() { Reviewer = 1, Movie = 2, Grade = 1, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 2, Grade = 2, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 2, Grade = 1, Date = new DateTime()},
+            new BEReview() { Reviewer = 1, Movie = 3, Grade = 5, Date = new DateTime()},
+            new BEReview() { Reviewer = 1, Movie = 3, Grade = 5, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 3, Grade = 3, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 3, Grade = 5, Date = new DateTime()}
+        };
+        Mock<IReviewRepository> mockRepository = new Mock<IReviewRepository>();
+        mockRepository.Setup(r=>r.GetAll()).Returns(fakeRepo);
+
+        IReviewService service = new ReviewService(mockRepository.Object);
+
+        List<int> expectedValue = new List<int>();
+        expectedValue.Add(1);
+        expectedValue.Add(3);
+
+        // Act
+        List<int> result = service.GetMoviesWithHighestNumberOfTopRates();
+        
+        // Assert
+        Assert.Equal(expectedValue, result );
+        mockRepository.Verify(r => r.GetAll(), Times.Once);
+    }
+    
+    
+   
 }

@@ -137,7 +137,53 @@ public class ReviewService : IReviewService
 
     public List<int> GetMoviesWithHighestNumberOfTopRates()
     {
-        throw new NotImplementedException();
+        List<BEReview> listOfMovies = new List<BEReview>(); 
+        List<int> listOfMoviesWithHighestNumberOfTopRates = new List<int>();
+        int topRate = 0; 
+        int numberOfTopRates = 0;
+        int amount = 0;
+        int movieID = 0;
+        foreach (BEReview review in repository.GetAll())
+        {
+            if (review.Grade >= topRate)
+            {
+                topRate = review.Grade;
+            }
+        }
+        
+        foreach (BEReview review in repository.GetAll())
+        {
+            if (!listOfMovies.Contains(review) && review.Grade.Equals(topRate))
+            {
+                listOfMovies.Add(review);
+            }
+            
+        }
+        
+        foreach (BEReview review in listOfMovies)
+        {
+            if (GetNumberOfRates(review.Movie, topRate) > numberOfTopRates)
+            {
+                numberOfTopRates = GetNumberOfRates(review.Movie, topRate);
+                
+            }
+        }
+        restart:
+        foreach (BEReview review in listOfMovies)
+        {
+            movieID = review.Movie;
+            if (listOfMovies.Contains(review).Equals(review.Movie == movieID))
+            {
+                if (amount == numberOfTopRates)
+                {
+                    listOfMoviesWithHighestNumberOfTopRates.Add(review.Movie);
+                    amount = 0;
+                }
+            }
+
+
+        }
+        return listOfMoviesWithHighestNumberOfTopRates;
     }
 
     public List<int> GetMostProductiveReviewers()
