@@ -76,7 +76,26 @@ public class ReviewService : IReviewService
 
     public double GetAverageRateOfMovie(int movie)
     {
-        throw new NotImplementedException();
+        int amount = 0;
+        double avrage = 0.0;
+
+        foreach (BEReview review in repository.GetAll())
+        {
+            if (review.Movie == movie)
+            {
+                amount++;
+                avrage = avrage + review.Grade;
+            }
+        }
+
+        if (amount == 0)
+        {
+            return 0;
+        }
+        else
+        {
+            return avrage / amount;
+        }
     }
 
     public int GetNumberOfRates(int movie, int rate)
