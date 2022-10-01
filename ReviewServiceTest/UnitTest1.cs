@@ -60,5 +60,32 @@ public class UnitTest1
         Assert.Equal(expectedValue, result);
         mockRepository.Verify(r => r.GetAll(), Times.Once);
     }
+    [Theory]
+    [InlineData(1,3.5)]
+    [InlineData(2,3)]
+    [InlineData(3,0)]
+    public void GetAverageRateFromReviewer(int reviewerID, double expectedValue)
+    {
+        // Arrange
+        BEReview[] fakeRepo = new BEReview[]
+        {
+            new BEReview() { Reviewer = 1, Movie = 1, Grade = 3, Date = new DateTime()},
+            new BEReview() { Reviewer = 1, Movie = 2, Grade = 4, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 1, Grade = 5, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 1, Grade = 1, Date = new DateTime()}
+            
+        };
+        Mock<IReviewRepository> mockRepository = new Mock<IReviewRepository>();
+        mockRepository.Setup(r=>r.GetAll()).Returns(fakeRepo);
+
+        IReviewService service = new ReviewService(mockRepository.Object);
+        
+        // Act
+        double result = service.GetAverageRateFromReviewer(reviewerID);
+        
+        // Assert
+        Assert.Equal(expectedValue, result);
+        mockRepository.Verify(r => r.GetAll(), Times.Once);
+    }
     
 }

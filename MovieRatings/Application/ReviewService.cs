@@ -31,7 +31,27 @@ public class ReviewService : IReviewService
 
     public double GetAverageRateFromReviewer(int reviewer)
     {
-        throw new NotImplementedException();
+        int amount = 0;
+        double avrage = 0.0;
+
+        foreach (BEReview review in repository.GetAll())
+        {
+            if (review.Reviewer == reviewer)
+            {
+                amount++;
+                avrage = avrage + review.Grade;
+            }
+        }
+
+        if (amount == 0)
+        {
+            return 0;
+        }
+        else
+        {
+            return avrage / amount;
+        }
+        
     }
 
     public int GetNumberOfRatesByReviewer(int reviewer, int rate)
