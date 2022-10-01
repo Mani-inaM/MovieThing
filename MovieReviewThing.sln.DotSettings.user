@@ -4,5 +4,6 @@
     &lt;TestId&gt;xUnit::1D79B822-C9C3-4B37-9952-304BF907BA4F::net6.0::ReviewServiceTest.UnitTest1.CreateReviewServiceWithRepository&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::1D79B822-C9C3-4B37-9952-304BF907BA4F::net6.0::ReviewServiceTest.UnitTest1.CreateReviewServiceWithNoRepositoryThatShouldThrowAnArgumentException&lt;/TestId&gt;&#xD;
     &lt;TestId&gt;xUnit::1D79B822-C9C3-4B37-9952-304BF907BA4F::net6.0::ReviewServiceTest.UnitTest1.GetNumberOfReviewsFromReviewer&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D79B822-C9C3-4B37-9952-304BF907BA4F::net6.0::ReviewServiceTest.UnitTest1.GetAverageRateOfMovie&lt;/TestId&gt;&#xD;
   &lt;/TestAncestor&gt;&#xD;
 &lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

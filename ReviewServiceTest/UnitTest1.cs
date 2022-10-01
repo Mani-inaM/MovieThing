@@ -163,5 +163,67 @@ public class UnitTest1
         mockRepository.Verify(r => r.GetAll(), Times.Once);
     }
 
+   [Fact]
+    public  void GetAverageRateOfMovie()
+    {
+        // Arrange
+        BEReview[] fakeRepo = new BEReview[]
+        {
+            new BEReview() { Reviewer = 1, Movie = 1, Grade = 3, Date = new DateTime()},
+            new BEReview() { Reviewer = 1, Movie = 2, Grade = 4, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 1, Grade = 5, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 1, Grade = 1, Date = new DateTime()}
+            
+        };
+        Mock<IReviewRepository> mockRepository = new Mock<IReviewRepository>();
+        mockRepository.Setup(r=>r.GetAll()).Returns(fakeRepo);
+
+        IReviewService service = new ReviewService(mockRepository.Object);
+        
+        // Act
+        double result = service.GetAverageRateOfMovie(3);
+        
+        // Assert
+        Assert.Equal(3, 3);
+        mockRepository.Verify(r => r.GetAll(), Times.Once);
+    }
+    
+    [Theory]
+    [InlineData(1,1,3)]
+    [InlineData(1,2,1)]
+    [InlineData(1,3,2)]
+    [InlineData(2,1,2)]
+    [InlineData(2,2,2)]
+    [InlineData(2,3,2)]
+    public void GetNumberOfRates(int movieID, int rate, int expectedValue)
+    {
+        // Arrange
+        BEReview[] fakeRepo = new BEReview[]
+        {
+            new BEReview() { Reviewer = 1, Movie = 1, Grade = 1, Date = new DateTime()},
+            new BEReview() { Reviewer = 1, Movie = 1, Grade = 1, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 1, Grade = 1, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 1, Grade = 2, Date = new DateTime()},
+            new BEReview() { Reviewer = 1, Movie = 1, Grade = 3, Date = new DateTime()},
+            new BEReview() { Reviewer = 1, Movie = 1, Grade = 3, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 2, Grade = 1, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 2, Grade = 1, Date = new DateTime()},
+            new BEReview() { Reviewer = 1, Movie = 2, Grade = 2, Date = new DateTime()},
+            new BEReview() { Reviewer = 1, Movie = 2, Grade = 2, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 2, Grade = 3, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 2, Grade = 3, Date = new DateTime()}
+        };
+        Mock<IReviewRepository> mockRepository = new Mock<IReviewRepository>();
+        mockRepository.Setup(r=>r.GetAll()).Returns(fakeRepo);
+
+        IReviewService service = new ReviewService(mockRepository.Object);
+        
+        // Act
+        int result = service.GetNumberOfRates(movieID, rate);
+        
+        // Assert
+        Assert.Equal(expectedValue, result);
+        mockRepository.Verify(r => r.GetAll(), Times.Once);
+    }
     
 }
