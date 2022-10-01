@@ -1,0 +1,12 @@
+C:\Users\manid\RiderProjects\MovieReviewThing\MovieRatings\bin\Debug\net6.0\MovieRatings.deps.json
+C:\Users\manid\RiderProjects\MovieReviewThing\MovieRatings\bin\Debug\net6.0\MovieRatings.dll
+C:\Users\manid\RiderProjects\MovieReviewThing\MovieRatings\bin\Debug\net6.0\MovieRatings.pdb
+C:\Users\manid\RiderProjects\MovieReviewThing\MovieRatings\obj\Debug\net6.0\MovieRatings.csproj.AssemblyReference.cache
+C:\Users\manid\RiderProjects\MovieReviewThing\MovieRatings\obj\Debug\net6.0\MovieRatings.GeneratedMSBuildEditorConfig.editorconfig
+C:\Users\manid\RiderProjects\MovieReviewThing\MovieRatings\obj\Debug\net6.0\MovieRatings.AssemblyInfoInputs.cache
+C:\Users\manid\RiderProjects\MovieReviewThing\MovieRatings\obj\Debug\net6.0\MovieRatings.AssemblyInfo.cs
+C:\Users\manid\RiderProjects\MovieReviewThing\MovieRatings\obj\Debug\net6.0\MovieRatings.csproj.CoreCompileInputs.cache
+C:\Users\manid\RiderProjects\MovieReviewThing\MovieRatings\obj\Debug\net6.0\MovieRatings.dll
+C:\Users\manid\RiderProjects\MovieReviewThing\MovieRatings\obj\Debug\net6.0\refint\MovieRatings.dll
+C:\Users\manid\RiderProjects\MovieReviewThing\MovieRatings\obj\Debug\net6.0\MovieRatings.pdb
+C:\Users\manid\RiderProjects\MovieReviewThing\MovieRatings\obj\Debug\net6.0\ref\MovieRatings.dll

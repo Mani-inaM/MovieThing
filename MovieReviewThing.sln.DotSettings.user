@@ -1,0 +1,8 @@
+﻿<wpf:ResourceDictionary xml:space="preserve" xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml" xmlns:s="clr-namespace:System;assembly=mscorlib" xmlns:ss="urn:shemas-jetbrains-com:settings-storage-xaml" xmlns:wpf="http://schemas.microsoft.com/winfx/2006/xaml/presentation">
+	<s:String x:Key="/Default/Environment/UnitTesting/UnitTestSessionStore/Sessions/=91192fe5_002D6a95_002D4a7e_002D9332_002D298e911e5994/@EntryIndexedValue">&lt;SessionState ContinuousTestingMode="0" IsActive="True" Name="CreateReviewServiceWithRepository" xmlns="urn:schemas-jetbrains-com:jetbrains-ut-session"&gt;&#xD;
+  &lt;TestAncestor&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D79B822-C9C3-4B37-9952-304BF907BA4F::net6.0::ReviewServiceTest.UnitTest1.CreateReviewServiceWithRepository&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D79B822-C9C3-4B37-9952-304BF907BA4F::net6.0::ReviewServiceTest.UnitTest1.CreateReviewServiceWithNoRepositoryThatShouldThrowAnArgumentException&lt;/TestId&gt;&#xD;
+    &lt;TestId&gt;xUnit::1D79B822-C9C3-4B37-9952-304BF907BA4F::net6.0::ReviewServiceTest.UnitTest1.GetNumberOfReviewsFromReviewer&lt;/TestId&gt;&#xD;
+  &lt;/TestAncestor&gt;&#xD;
+&lt;/SessionState&gt;</s:String></wpf:ResourceDictionary>

@@ -1,0 +1,22 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "MovieRatings", "MovieRatings\MovieRatings.csproj", "{ADD7F3AB-1AB3-4BA1-BC48-12B7B0F98909}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "ReviewServiceTest", "ReviewServiceTest\ReviewServiceTest.csproj", "{1D79B822-C9C3-4B37-9952-304BF907BA4F}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{ADD7F3AB-1AB3-4BA1-BC48-12B7B0F98909}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{ADD7F3AB-1AB3-4BA1-BC48-12B7B0F98909}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{ADD7F3AB-1AB3-4BA1-BC48-12B7B0F98909}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{ADD7F3AB-1AB3-4BA1-BC48-12B7B0F98909}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1D79B822-C9C3-4B37-9952-304BF907BA4F}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1D79B822-C9C3-4B37-9952-304BF907BA4F}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1D79B822-C9C3-4B37-9952-304BF907BA4F}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1D79B822-C9C3-4B37-9952-304BF907BA4F}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+EndGlobal
