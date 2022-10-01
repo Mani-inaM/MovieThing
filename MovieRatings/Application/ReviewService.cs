@@ -56,7 +56,26 @@ public class ReviewService : IReviewService
 
     public int GetNumberOfRatesByReviewer(int reviewer, int rate)
     {
-        throw new NotImplementedException();
+        int count = 0;
+        if (rate is >= 1 and <= 5)
+        {
+            foreach (BEReview review in repository.GetAll())
+            {
+                if (review.Reviewer == reviewer)
+                {
+                    if (rate == review.Grade)
+                    {
+                        count++;
+                    }
+                }
+            }
+        }
+        else
+        {
+            throw new ArgumentException("Invalid Number");
+        }
+
+        return count;
     }
 
     public int GetNumberOfReviews(int movie)
