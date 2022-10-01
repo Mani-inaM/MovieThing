@@ -100,7 +100,20 @@ public class ReviewService : IReviewService
 
     public int GetNumberOfRates(int movie, int rate)
     {
-        throw new NotImplementedException();
+        int result = 0;
+
+        foreach (BEReview review in repository.GetAll())
+        {
+            if (review.Movie == movie)
+            {
+                if (rate == review.Grade)
+                {
+                    result++;
+                }
+            }
+        }
+
+        return result;
     }
 
     public List<int> GetMoviesWithHighestNumberOfTopRates()
