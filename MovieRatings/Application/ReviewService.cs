@@ -143,6 +143,7 @@ public class ReviewService : IReviewService
         int numberOfTopRates = 0;
         int amount = 0;
         int movieID = 0;
+        int number = 0;
         foreach (BEReview review in repository.GetAll())
         {
             if (review.Grade >= topRate)
@@ -168,20 +169,20 @@ public class ReviewService : IReviewService
                 
             }
         }
-        restart:
+        
         foreach (BEReview review in listOfMovies)
         {
-            movieID = review.Movie;
-            if (listOfMovies.Contains(review).Equals(review.Movie == movieID))
+            
+            number = GetNumberOfRates(review.Movie, topRate);
+            if (!listOfMoviesWithHighestNumberOfTopRates.Contains(review.Movie) && number == numberOfTopRates)
             {
-                if (amount == numberOfTopRates)
-                {
-                    listOfMoviesWithHighestNumberOfTopRates.Add(review.Movie);
-                    amount = 0;
-                }
+                listOfMoviesWithHighestNumberOfTopRates.Add(review.Movie);
+                
+                //listOfMoviesWithHighestNumberOfTopRates.Add(22);
+                //idk why it doesnt work 
+                
             }
-
-
+            
         }
         return listOfMoviesWithHighestNumberOfTopRates;
     }

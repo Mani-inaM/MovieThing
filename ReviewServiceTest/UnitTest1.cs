@@ -239,12 +239,12 @@ public class UnitTest1
             new BEReview() { Reviewer = 2, Movie = 1, Grade = 5, Date = new DateTime()},
             new BEReview() { Reviewer = 2, Movie = 1, Grade = 2, Date = new DateTime()},
             new BEReview() { Reviewer = 1, Movie = 2, Grade = 5, Date = new DateTime()},
-            new BEReview() { Reviewer = 1, Movie = 2, Grade = 1, Date = new DateTime()},
+            new BEReview() { Reviewer = 1, Movie = 2, Grade = 5, Date = new DateTime()},
             new BEReview() { Reviewer = 2, Movie = 2, Grade = 2, Date = new DateTime()},
             new BEReview() { Reviewer = 2, Movie = 2, Grade = 1, Date = new DateTime()},
             new BEReview() { Reviewer = 1, Movie = 3, Grade = 5, Date = new DateTime()},
             new BEReview() { Reviewer = 1, Movie = 3, Grade = 5, Date = new DateTime()},
-            new BEReview() { Reviewer = 2, Movie = 3, Grade = 3, Date = new DateTime()},
+            new BEReview() { Reviewer = 2, Movie = 3, Grade = 4, Date = new DateTime()},
             new BEReview() { Reviewer = 2, Movie = 3, Grade = 5, Date = new DateTime()}
         };
         Mock<IReviewRepository> mockRepository = new Mock<IReviewRepository>();
