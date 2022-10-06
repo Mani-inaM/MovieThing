@@ -213,7 +213,27 @@ public class ReviewService : IReviewService
 
     public List<int> GetTopRatedMovies(int amount)
     {
-        throw new NotImplementedException();
+        List<int> listOfMovies = new List<int>();
+        double topAverage = 0.0;
+        foreach (BEReview review in repository.GetAll())
+        {
+            if (GetAverageRateOfMovie(review.Movie) > topAverage)
+            {
+                topAverage = GetAverageRateOfMovie(review.Movie);
+            }
+        }
+        
+        foreach (BEReview review in repository.GetAll())
+        {
+            if (GetAverageRateOfMovie(review.Movie) == topAverage)
+            {
+                if (!listOfMovies.Contains(review.Movie))
+                {
+                    listOfMovies.Add(review.Movie);
+                }
+            }
+        }
+        return listOfMovies;
     }
 
     public List<int> GetTopMoviesByReviewer(int reviewer)
