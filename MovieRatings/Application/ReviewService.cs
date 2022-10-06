@@ -184,7 +184,31 @@ public class ReviewService : IReviewService
 
     public List<int> GetMostProductiveReviewers()
     {
-        throw new NotImplementedException();
+        SortedList<int, int> reviewersInRepository = new SortedList<int, int>();
+        List<int> mostActiveReviewers = new List<int>();
+        int highestNumberOfReviews = 0;
+        foreach (BEReview review in repository.GetAll())
+        {
+            if(!reviewersInRepository.ContainsKey(review.Reviewer))
+            {
+                var currentNumberOfReviews = GetNumberOfReviewsFromReviewer(review.Reviewer);
+                reviewersInRepository.Add(review.Reviewer,currentNumberOfReviews);
+                if (currentNumberOfReviews  > highestNumberOfReviews)
+                {
+                    highestNumberOfReviews = currentNumberOfReviews;
+                }
+            }
+        }
+
+        foreach (KeyValuePair<int, int> reviewer in reviewersInRepository)
+        {
+            if (highestNumberOfReviews == reviewer.Value)
+            {
+                mostActiveReviewers.Add(reviewer.Key);
+            }
+        }
+
+        return mostActiveReviewers;
     }
 
     public List<int> GetTopRatedMovies(int amount)
