@@ -261,7 +261,6 @@ public class UnitTest1
         
         // Assert
         Assert.Equal(expectedValue, result );
-        mockRepository.Verify(r => r.GetAll(), Times.Once);
     }
     
     

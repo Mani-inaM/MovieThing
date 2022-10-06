@@ -177,12 +177,7 @@ public class ReviewService : IReviewService
             if (!listOfMoviesWithHighestNumberOfTopRates.Contains(review.Movie) && number == numberOfTopRates)
             {
                 listOfMoviesWithHighestNumberOfTopRates.Add(review.Movie);
-                
-                //listOfMoviesWithHighestNumberOfTopRates.Add(22);
-                //idk why it doesnt work 
-                
             }
-            
         }
         return listOfMoviesWithHighestNumberOfTopRates;
     }
