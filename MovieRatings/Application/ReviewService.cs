@@ -233,12 +233,28 @@ public class ReviewService : IReviewService
                 }
             }
         }
+
+        if (listOfMovies.Count > amount)
+        {
+            listOfMovies.RemoveAt(listOfMovies.Count -1);
+        }
+
         return listOfMovies;
     }
 
     public List<int> GetTopMoviesByReviewer(int reviewer)
     {
-        throw new NotImplementedException();
+        List<int> finalList = new List<int>();
+        foreach (BEReview review in repository.GetAll())
+        {
+            if (review.Reviewer == reviewer)
+            {
+               finalList = GetTopRatedMovies(3);
+            }
+        }
+        
+        return finalList;
+
     }
 
     public List<int> GetReviewersByMovie(int movie)
